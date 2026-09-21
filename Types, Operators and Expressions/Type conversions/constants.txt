@@ -1,0 +1,36 @@
+# Basic data type summary
+
+Data types:
+	char - single byte, capable of holding one character
+	int - an integer, size depends on machine
+	float - single-precision floating point
+	double - double-precision floating point
+	
+- Shorts and ints are at least 16 bits, longs are at least 32 bits, and short is no longer than int, which is no longer than long.
+- Signed and unsigned can be applied to char or int, unsigned nums are always zero or positive, signed nums are negative, zero or positive.
+- Long double specifies extended-precision floating point num.
+
+# Constants
+Long constant -> L or l -> 123456789L
+Unsigned constants -> U or u
+Float constants -> F or f
+Long double float constant -> L or l
+Octal integer -> Leading 0
+Hexadecimal integer -> Leading 0X or 0x
+Character constant -> Written as one char within single quotes
+
+# Escape sequences
+\a alert (bell) character		\v vertical tab
+\b backspace					\\ backslash
+\f formfeed						\? question mark
+\n newline						\' single quote
+\r carriage return				\" double quote
+\t horizontal tab				\000 octal number - 0 represents the digits to place
+\0 null							\xhh hexadecimal number - h represents the digits to place
+
+# Enumerations
+- List of constant integer values e.g enum boolean { NO, YES };
+- The first name in an enum has value 0, the next 1, and so on, unless explicit values are specified.
+
+# Declarations
+- const can be applied to a variable declaration to show its vlue will not be altered

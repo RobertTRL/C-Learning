@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "arrayssc.52205e10\\x64\\Debug\\exercise1sol1.obj",
+            "outputs": [
+                "arrayssc.52205e10\\x64\\Debug\\exercise1sol1.cpp.obj.dt.module.json",
+                "arrayssc.52205e10\\x64\\Debug\\exercise1sol1.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A13A16D-85E7-4BB8-BAC6-D03E4D8C550A}|Type conversions.vcxproj|D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\exercise1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A13A16D-85E7-4BB8-BAC6-D03E4D8C550A}|Type conversions.vcxproj|solutionrelative:exercise1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A13A16D-85E7-4BB8-BAC6-D03E4D8C550A}|Type conversions.vcxproj|D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\constants.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3A13A16D-85E7-4BB8-BAC6-D03E4D8C550A}|Type conversions.vcxproj|solutionrelative:constants.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "constants.txt",
+              "DocumentMoniker": "D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\constants.txt",
+              "RelativeDocumentMoniker": "constants.txt",
+              "ToolTip": "D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\constants.txt",
+              "RelativeToolTip": "constants.txt",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-09-19T10:40:36.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "exercise1.c",
+              "DocumentMoniker": "D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\exercise1.c",
+              "RelativeDocumentMoniker": "exercise1.c",
+              "ToolTip": "D:\\Coding\\C Learning\\Types, Operators and Expressions\\Type conversions\\exercise1.c",
+              "RelativeToolTip": "exercise1.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-19T10:02:12.81Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
