@@ -1,0 +1,25 @@
+# Visual Studio hidden files/cache
+.vs/
+
+# Build output
+x64/
+Debug/
+Release/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.log
+
+# Per-user project files
+*.vcxproj.user
+
+# Build logs/intermediate files
+*.tlog
+*.idb
+*.recipe
+*.vsidx
+*.suo
+*.db
+*.ipch
+**/*.tlog/

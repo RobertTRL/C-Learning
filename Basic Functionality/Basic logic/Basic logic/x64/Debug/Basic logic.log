@@ -1,3 +1,0 @@
-﻿  exercise.c
-D:\Coding\C Learning\Basic functionality\Basic logic\exercise.c(18,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Basic logic.vcxproj -> D:\Coding\C Learning\Basic functionality\Basic logic\x64\Debug\Basic logic.exe
