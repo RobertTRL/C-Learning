@@ -4,7 +4,7 @@
 double exercise(char s[]) {
 
 	double val, power, exp_result = 1.0;
-	int i, sign, exp_sign, exp_val;
+	int i, sign, is_exp_negative, exp_val;
 
 	for (i = 0; isspace(s[i]); i++) /* skip white space */
 		;
@@ -28,7 +28,7 @@ double exercise(char s[]) {
 		i++;
 	}
 
-	exp_sign = (s[i] == '-') ? -1 : 1;
+	is_exp_negative = (s[i] == '-') ? 1 : 0;
 
 	if (s[i] == '+' || s[i] == '-')
 		i++;
@@ -40,7 +40,7 @@ double exercise(char s[]) {
 		exp_result *= 10;
 	}
 
-	if (!exp_sign) {
+	if (!is_exp_negative) {
 		exp_result = 1 / exp_result;
 	}
 
