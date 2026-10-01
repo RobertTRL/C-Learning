@@ -11,6 +11,12 @@ int getop(char[]);
 void push(double);
 double pop(void);
 
+int sp = 0; /* next free stack position */
+double val[MAXVAL]; /* value stack */
+
+char buf[BUFSIZE]; /* buffer for ungetch */
+int bufp = 0; /* next free position in buf */
+
 /* reverse Polish calculator */
 main() {
 
@@ -46,6 +52,13 @@ main() {
 				push((int)pop() % (int)op2);
 			else
 				printf("Error: Undefined number\n");
+		case '?':
+			if (sp > 0)
+				print("\t%.8g\n", val[sp - 1]);
+
+			else
+				print("Error: Cannot print empty stack");
+			break;
 		case '\n':
 			printf("\t%.8g\n", pop());
 			break;
@@ -56,9 +69,6 @@ main() {
 	}
 	return 0;
 }
-
-int sp = 0; /* next free stack position */
-double val[MAXVAL]; /* value stack */
 
 /* push: push f onto value stack */
 void push(double f) {
@@ -78,8 +88,6 @@ double pop(void) {
 	}
 }
 
-char buf[BUFSIZE]; /* buffer for ungetch */
-int bufp = 0; /* next free position in buf */
 int getch(void) { /* get a (possibly pushed back) character */
 
 	return (bufp > 0) ? buf[--bufp] : getchar();
