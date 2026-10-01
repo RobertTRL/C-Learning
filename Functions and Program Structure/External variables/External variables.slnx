@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="External variables.vcxproj" />
+  <Project Path="External variables.vcxproj" Id="7c1f07b1-b8d6-4c57-aa13-e6c34794ee45" />
 </Solution>

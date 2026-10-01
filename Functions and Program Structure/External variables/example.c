@@ -4,10 +4,12 @@
 #define MAXOP 100
 #define NUMBER '0'
 #define MAXVAL 100 /* maximum depth of val stack */
+#define BUFSIZE 100
 
 int getop(char []);
 void push(double);
 double pop(void);
+
 /* reverse Polish calculator */
 main() {
 
@@ -33,10 +35,9 @@ main() {
 		case'/':
 			op2 = pop();
 			if (op2 != 0.0)
-				push(pop() - op2);
-			else
 				push(pop() / op2);
-			printf("error: zero divisor\n");
+			else
+				printf("error: zero divisor\n");
 			break;
 		case '\n':
 			printf("\t%.8g\n", pop());
@@ -68,4 +69,19 @@ double pop(void) {
 		printf("error: stack empty\n");
 		return 0.0;
 	}
+}
+
+char buf[BUFSIZE]; /* buffer for ungetch */
+int bufp = 0; /* next free position in buf */
+int getch(void) { /* get a (possibly pushed back) character */
+
+	return (bufp > 0) ? buf[--bufp] : getchar();
+}
+
+void ungetch(int c) {/* push character back on input */
+
+	if (bufp >= BUFSIZE)
+		printf("ungetch: too many characters\n");
+	else
+		buf[bufp++] = c;
 }
