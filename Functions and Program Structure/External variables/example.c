@@ -39,6 +39,12 @@ main() {
 			else
 				printf("error: zero divisor\n");
 			break;
+		case '%':
+			op2 = pop();
+			if (op2 != 0)
+				push(pop() / op2);
+			else
+				printf("Error: Undefined number\n");
 		case '\n':
 			printf("\t%.8g\n", pop());
 			break;
