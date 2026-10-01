@@ -55,10 +55,17 @@ main() {
 		case '?':
 			if (sp > 0)
 				print("\t%.8g\n", val[sp - 1]);
-
 			else
 				print("Error: Cannot print empty stack");
 			break;
+		case '#':
+			if (sp > 0)
+				push(val[sp - 1]);
+			else
+				print("Error: Empty stack, cannot duplicate non-existent value");
+			break;
+		case '~':
+			op2 = pop();
 		case '\n':
 			printf("\t%.8g\n", pop());
 			break;
