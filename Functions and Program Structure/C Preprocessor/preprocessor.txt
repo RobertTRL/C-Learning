@@ -1,2 +1,13 @@
 Most frequently used features are #include, to include the contents of a file during compilation
 and #define, to replace a token by an arbitrary number of characters
+
+# File inclusion
+Makes it easy to handle collections of #defines and declarations
+Any source line in the form #include <filename> or #include "filename" 
+is replaced by the contents of filename
+
+#Macro substitution
+A definition has the form
+#define name replacement text
+
+Names may be undefined using #undef
