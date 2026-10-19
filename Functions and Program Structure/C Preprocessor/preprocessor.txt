@@ -6,8 +6,20 @@ Makes it easy to handle collections of #defines and declarations
 Any source line in the form #include <filename> or #include "filename" 
 is replaced by the contents of filename
 
-#Macro substitution
+# Macro substitution
 A definition has the form
 #define name replacement text
 
 Names may be undefined using #undef
+
+Formal parameters are not replaced within quoted strings. However, 
+if a parameter name is preceded by a # in the replacement text, 
+the combination will be expanded into a quoted string
+with the parameter replaced by the actual argument
+
+Each " is replaced by \" and each \ is replaced by \\ 
+
+The preprocessor operator ## provides a way to concatenate actual arguments
+during macro expression. If a parameter in the replacement text is adjacent to a
+##, the parameter is replaced by the actual argument, the ## and the surrounding
+white space are removed, and the argument is rescanned
