@@ -23,3 +23,11 @@ The preprocessor operator ## provides a way to concatenate actual arguments
 during macro expression. If a parameter in the replacement text is adjacent to a
 ##, the parameter is replaced by the actual argument, the ## and the surrounding
 white space are removed, and the argument is rescanned
+
+# Conditional inclusion
+
+The #if line evaluates a constant integer expression, if the expression is non-zero, 
+subsequent lines until an #endif, #elif or #else are included
+The expression defined(name) in an #if is 1 if the name has been defined, O otherwise
+
+The #ifdef and #ifndef lines are specialized forms that test whether a name is defined
