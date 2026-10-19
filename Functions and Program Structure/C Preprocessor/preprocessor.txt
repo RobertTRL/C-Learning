@@ -1,0 +1,2 @@
+Most frequently used features are #include, to include the contents of a file during compilation
+and #define, to replace a token by an arbitrary number of characters
