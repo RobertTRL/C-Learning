@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#define SIZE 100
+#define SIZE 10
 
 int getch(void);
 void ungetch(int);
@@ -11,12 +11,12 @@ void main() {
 		;
 }
 
-
 /* getint: get next integer from input into #pn */
 int getint(int *pn) {
 	int c, sign;
 	while (isspace(c = getch()))
 		;
+
 	if (!isdigit(c) && c != EOF && c != '+' && c != '-') {
 		ungetch(c); /* it's not a number */
 		return 0;
