@@ -64,8 +64,15 @@ main() {
 			else
 				print("Error: Empty stack, cannot duplicate non-existent value");
 			break;
-		case '~':
-			op2 = pop();
+		case '~': {
+			double temp1 = pop();
+			double temp2 = pop();
+			push(temp1);
+			push(temp2);
+		}
+		case '!':
+			sp = 0;
+			break;
 		case '\n':
 			printf("\t%.8g\n", pop());
 			break;

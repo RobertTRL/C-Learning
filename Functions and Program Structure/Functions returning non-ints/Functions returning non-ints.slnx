@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Functions returning non-ints.vcxproj" />
+  <Project Path="Functions returning non-ints.vcxproj" Id="eeab2944-9514-46a8-aba3-2c183e632e17" />
 </Solution>

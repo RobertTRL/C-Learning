@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="C Preprocessor.vcxproj" />
+  <Project Path="C Preprocessor.vcxproj" Id="82c2e762-bf0b-40f0-ba70-9441f104d5c4" />
 </Solution>
