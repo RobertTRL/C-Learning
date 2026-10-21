@@ -17,3 +17,7 @@ zero of the array. Thus after assignment, pa = &a[0]; pa and a have identical va
 
 Since the name of an array is a synonym for the location for the initial element, the
 assignment pa = &a[0] can also be rewritten as pa = a;
+
+A reference to a[i] can also be rewritten as *(a + i), &a[i] and a + i are also identical
+
+Similarly, pa[i] is identical to *(pa + i)
