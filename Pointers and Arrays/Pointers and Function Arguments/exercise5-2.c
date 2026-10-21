@@ -5,9 +5,9 @@
 int getch(void);
 void ungetch(int);
 
-float getfloat(float* pn) {
+int getfloat(float* pn) {
 	int c, sign, signchar = 0;
-	double power;
+	double value, power = 1.0;
 
 	while (isspace(c = getch()))
 		;
@@ -33,21 +33,20 @@ float getfloat(float* pn) {
 		}
 	}
 
-	for (*pn = 0.0; isdigit(c); c = getch())
-		*pn = 10 * *pn + (c - '0');
+	for (value = 0.0; isdigit(c); c = getch())
+		*pn = 10 * value + (c - '0');
 
 	if (c == '.') {
 		c = getch();
+		for (; isdigit(c); c = getch()) {
+			value = 10.0 * value + (c - '0');
+			power *= 10.0;
+		}
 	}
 
-	for (power = 1.0; isdigit(c); c = getch()) {
-		*pn = 10.0 * *pn + (c - '0');
-		power *= 10.0;
-	}
-
-	*pn = sign * *pn / power;
+	*pn = sign * value / power;
 
 	if (c != EOF)
 		ungetch(c);
-	return c;
+	return 1;
 }
