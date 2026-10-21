@@ -13,7 +13,7 @@ int main(void) {
 
 /* getint: get next integer from input into #pn */
 int getint(int* pn) {
-	int c, sign;
+	int c, sign, signchar = 0;
 	while (isspace(c = getch()))
 		;
 
@@ -24,8 +24,19 @@ int getint(int* pn) {
 
 	sign = (c == '-') ? -1 : 1;
 
-	if (c == '+' || c == '-')
+	if (c == '+' || c == '-') {
+		signchar = c;
 		c = getch();
+
+		if (!isdigit(c)) {
+			if (c != EOF) {
+				ungetch(c);
+
+			}
+			ungetch(signchar);
+			return 0;
+		}
+	}
 
 	for (*pn = 0; isdigit(c); c = getch())
 		*pn = 10 * *pn + (c - '0');
