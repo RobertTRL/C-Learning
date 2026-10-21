@@ -22,3 +22,7 @@ A reference to a[i] can also be rewritten as *(a + i), &a[i] and a + i are also 
 
 Similarly, pa[i] is identical to *(pa + i). Note that pa is a variable, so pa = a and pa++
 are legal, while a = pa and a++ are illegal, since a is not a variable.
+
+When an array name is passed as a function, what is passed is the location of the initial element
+
+As formal parameters in the function definition, char s[] and char *s are equivalent, latter is prefered
