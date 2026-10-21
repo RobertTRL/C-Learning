@@ -1,3 +1,4 @@
+// Pointer and array notes
 
 The notation a[i] refers to the i-th element of the array. If pa is a pointer to
 an int, declared as:
@@ -10,3 +11,9 @@ The assignment x = *pa will copy the contents of a[0] into x
 If pa points to a particular element in an array, pa + i points i elements after
 pa, pa - i points i elements before. Thus if pa points to a[0], *(pa + 1) refers to
 the contents of a[1], pa + i is the address of a[i] and *(pa + i) is the contents of a[i].
+
+By definition, the value of a variable or expression of type array is the address of element
+zero of the array. Thus after assignment, pa = &a[0]; pa and a have identical values.
+
+Since the name of an array is a synonym for the location for the initial element, the
+assignment pa = &a[0] can also be rewritten as pa = a;
