@@ -1,0 +1,12 @@
+
+The notation a[i] refers to the i-th element of the array. If pa is a pointer to
+an int, declared as:
+		int *pa
+then the assignment pa = &a[0]; sets pa to point to element zero of a; that is,
+pa contains the address of a[0]
+
+The assignment x = *pa will copy the contents of a[0] into x
+
+If pa points to a particular element in an array, pa + i points i elements after
+pa, pa - i points i elements before. Thus if pa points to a[0], *(pa + 1) refers to
+the contents of a[1], pa + i is the address of a[i] and *(pa + i) is the contents of a[i].
