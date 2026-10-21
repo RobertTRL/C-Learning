@@ -20,4 +20,5 @@ assignment pa = &a[0] can also be rewritten as pa = a;
 
 A reference to a[i] can also be rewritten as *(a + i), &a[i] and a + i are also identical
 
-Similarly, pa[i] is identical to *(pa + i)
+Similarly, pa[i] is identical to *(pa + i). Note that pa is a variable, so pa = a and pa++
+are legal, while a = pa and a++ are illegal, since a is not a variable.
