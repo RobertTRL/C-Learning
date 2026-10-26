@@ -14,3 +14,8 @@ char *alloc(int n) { /* return pointer to n characters */
 	 return 0;
  
 }
+
+void afree(char* p) /* free storage pointed to by Р */ {
+	if (p >= allocbuf && p < allocbuf + ALLOCSIZE)
+		allocp = p;
+}
