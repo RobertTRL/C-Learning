@@ -11,3 +11,14 @@ void strcat(char s[], char t[]) {
 		;
 
 }
+
+/* Pointer version of strcat */
+void strcat(char* s, char* t) {
+	int *ps = s, *pt = t;
+
+	while (*ps++ != '\0')
+		;
+
+	while (*ps++ == *pt++)
+		;
+}
