@@ -3,10 +3,11 @@
 
 #define MAXLINES 5000 /* max #lines to be sorted */
 #define MAXLEN 1000 /* max length of any input line */
+#define MAXSTORAGE 500000
 
 char* lineptr[MAXLINES]; /* pointers to text lines */
 
-int readlines(char* lineptr[], int nlines);
+int readlines(char* lineptr[], int maxlines, char* stored_buf, int max_storage);
 void writelines(char* lineptr[], int nlines);
 
 void qsort(char* lineptr[], int left, int right);
@@ -14,7 +15,9 @@ void qsort(char* lineptr[], int left, int right);
 /* sort input lines */
 int main() {
 	int nlines; /* number of input lines read */
-	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
+	char linestorage[MAXSTORAGE];
+
+	if ((nlines = readlines(lineptr, MAXLINES, linestorage, MAXSTORAGE)) >= 0) {
 		qsort(lineptr, 0, nlines - 1);
 		writelines(lineptr, nlines);
 		return 0;
@@ -30,18 +33,21 @@ int getline(char*, int);
 char* alloc(int);
 
 /* readlines: read input lines */
-int readlines(char* lineptr[], int maxlines) {
+int readlines(char* lineptr[], int maxlines, char* stored_buf, int max_storage) {
 	int len, nlines;
-	char* p, line[MAXLEN];
+	char line[MAXLEN];
+	char *p = stored_buf;
+	char *buf_end = stored_buf + max_storage;
 
 	nlines = 0;
 	while ((len = getline(line, MAXLEN)) > 0)
-		if (nlines >= maxlines || (p = alloc(len)) == NULL)
+		if (nlines >= maxlines || (p + len) > buf_end)
 			return -1;
 		else {
 			line[len - 1] = '\0'; /* delete newline */
 			strcpy(p, line);
 			lineptr[nlines++] = p;
+			p += len;
 
 		}
 	return nlines;
