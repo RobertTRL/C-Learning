@@ -4,7 +4,7 @@
 #define MAXLINES 5000 /* max #lines to be sorted */
 #define MAXLEN 1000 /* max length of any input line */
 
-char lineptr[MAXLINES]; /* pointers to text lines */
+char *lineptr[MAXLINES]; /* pointers to text lines */
 
 int readlines(char *lineptr[], int nlines);
 void writelines(char *lineptr[], int nlines);
@@ -25,7 +25,7 @@ int main() {
 	}
 }
 
-int getline(char , int);
+int getline(char *, int);
 char *alloc(int);
 
 /* readlines: read input lines */
@@ -47,7 +47,7 @@ int readlines(char *lineptr[], int maxlines) {
 }
 
 /* writelines: write output lines */
-void writelines(char lineptr[], int nlines) {
+void writelines(char *lineptr[], int nlines) {
 	int i;
 
 	for (i = 0; i < nlines; i++)
