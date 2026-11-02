@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Multidimensional arrays.vcxproj" />
+  <Project Path="Multidimensional arrays.vcxproj" Id="fdea3af9-1733-4b81-81cc-b0f2de1b4b48" />
 </Solution>
