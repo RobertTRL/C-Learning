@@ -16,6 +16,15 @@ int day_of_year(int year, int month, int day) {
 		day += *++p;
 	
 	return day;
+	/*
+	int i, leap;
+	leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+
+		for (i = 1; i < month; i++)
+			day += *(*(daytab + leap) + i);
+
+	return day;
+	*/
 }
 
 /* month_day: set month, day from day of year */
