@@ -10,7 +10,7 @@ int day_of_year(int year, int month, int day) {
 	if (month <= 0 || month > 12)
 		return -1;
 
-	if (day < 1 || day > 366)
+	if (day < 0 || day > 31)
 		return -1;
 
 	int i, leap;
