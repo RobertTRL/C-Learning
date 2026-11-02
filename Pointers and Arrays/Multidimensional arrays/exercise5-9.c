@@ -41,5 +41,15 @@ void month_day(int year, int yearday, int* pmonth, int* pday) {
 
 	*pmonth = p - *(daytab + leap);
 	*pday = yearday;
+	/*
+	int i, leap;
+
+	leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+	for (i = 1; yearday > *(*(daytab + leap) + i); i++)
+		yearday -= *(*(daytab + leap) + i);
+
+	*pmonth = i;
+	*pday = yearday;
+	*/
 
 }
