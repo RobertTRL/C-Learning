@@ -21,13 +21,16 @@ int day_of_year(int year, int month, int day) {
 /* month_day: set month, day from day of year */
 void month_day(int year, int yearday, int* pmonth, int* pday) {
 
-	int i, leap;
+	int leap;
+	char* p;
 
 	leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-	for (i = 1; yearday > daytab[leap][i]; i++)
-		yearday -= daytab[leap][i];
+	p = *(daytab + leap);
 
-	*pmonth = i;
+	while (yearday > *++p)
+		yearday -= *p;
+
+	*pmonth = p - *(daytab + leap);
 	*pday = yearday;
 
 }
