@@ -6,6 +6,12 @@ static char daytab[2][13] = {
 
 /* day_of_year: set day of year from month & day */
 int day_of_year(int year, int month, int day) {
+	
+	if (month <= 0 || month > 12)
+		return -1;
+
+	if (day < 1 || day > 366)
+		return -1;
 
 	int i, leap;
 	leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
